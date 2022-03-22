@@ -1,0 +1,32 @@
+{
+  "name": "ictclub_web",
+  "version": "1.0.0",
+  "description": "school website",
+  "main": "main/main.js",
+  "repository": "https://github.com/Ndejjeco-ICT/Ndejje-website",
+  "author": "ict_club",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@types/animejs": "^3.1.4",
+    "css-loader": "^6.7.1",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-inject": "^5.0.5",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.2",
+    "webpack": "^5.70.0"
+  },
+  "dependencies": {
+    "animejs": "^3.2.1"
+  }
+}
