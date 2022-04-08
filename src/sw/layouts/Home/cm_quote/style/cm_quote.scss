@@ -1,0 +1,43 @@
+@use  "../../../sass/variables.scss" as V;
+
+
+.ponaco-main {
+    
+.ponaco-splitview-6 {
+    margin: 0 0 0px 0;
+    .wx-component-6 {
+        width: 100%;
+        height: 600px;
+        @include V.center();
+        .main-content-holder {
+            width: fit-content;
+            font-family : V.$common-font;
+    
+            .x-content-1 {
+                font-weight: 350;
+                font-size: 75pt;
+                max-width: 900px;
+                text-align: center;
+                margin-bottom: 20px;
+               
+                &::after{
+                    content: ".";
+                }
+            }
+            .x-content-2 {
+                text-align: center;
+                font-weight: 500;
+                font-size: 15pt;
+                &::before{
+                    content: "~";
+                }
+                &::after{
+                    content: "~";
+                }
+            }
+        }
+    }
+    
+}
+}
+

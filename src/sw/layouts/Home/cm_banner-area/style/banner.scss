@@ -1,0 +1,173 @@
+@use '../../../sass/variables' as V;
+
+/*
+    should be placed in one file to prevent te sass compiler and gulp from commpiling and adding it multiple times
+*/
+@font-face {
+    font-family: Roboto;
+    src: url("../resources/font//Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+
+body{
+    transition: all 2s;
+    margin: 0px;
+    padding: 0px; 
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    user-select: none;
+};
+
+
+/*
+    Main-Area inherited by all
+*/
+.ponaco-main {
+
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh ;
+
+    .ponaco-splitview-1{
+        width: 100%;
+        height: 750px;
+        /*Responsible for the parallax effect
+        */
+        background-image: url("../resources/stock-photo-african-american-student-girl-holding-books-black-people-255426997.jpg ");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size:cover; 
+       
+
+        /*Main component header section*/
+        .wx-component-header-section{
+            width: 100%;
+            height: 200px;
+        /*Main enroll registration btn*/
+        .wx-header-component-area{
+            // position: absolute;
+            // right: 0px;
+            // top: 0px;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            /* Main title and badge component area*/
+            .wx-badge-wrapper {
+                margin:8px 0px 0px 30px;
+                height: 40px;
+                width:  400px;
+                display: grid;
+                grid-template-columns: 100px 300px;
+
+                .badge-icon {
+                    margin-left: 20px;
+                    width: 50px;
+                    height : 40px;
+                    border: 2px solid V.$layout-color;
+                }
+
+                .badge-title {
+                    display: flex;
+                    align-items: center;
+                    color: rgb(0, 0, 0);
+                }
+            }
+
+            .registration-btn {
+                cursor: pointer;
+                margin: 10px 20px 0px 0px;
+                @include V.common_btn();
+           }
+
+
+        }
+           
+
+        /*main half navigation area*/
+        .wx-navigation-bar-half-area {
+            margin-top: 0px;
+            width: 100%;
+            height:100px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+            /*Main navigation bar wrapper area*/
+            .navigation-bar-wrapper {
+               display: grid;
+               margin : 20px 30px 0px 0px;
+               grid-template-rows: 40px 50px;
+               .main-navigation-bar {
+                   width:auto;
+                   height: 50px;
+                   display: flex;
+                   align-items: center;
+                   ul.navigation-items{
+                       margin: 0px;
+                       padding: 0px;
+                       display: flex;
+
+                       li {
+                           margin: 0px 20px 0px 20px;
+                           list-style: none;
+                           border-bottom: 1px solid #00000000;
+                           transition: all .4s;
+                           &:hover {
+                               border-bottom:1px solid #000;
+                           }
+                         
+                        a {
+                            text-decoration: none;
+                            &:active{
+                                color: unset;
+                            }
+                        }
+                       }
+                   }
+               }
+            }
+        }
+    }
+
+        .wx-component-user-section {
+            width: fit-content;
+            margin-left: 30px;
+            .welcome-note-section {
+                display: grid;
+                grid-template-rows: auto 50px 40px;
+
+                .note-1 {
+                    word-wrap: normal;
+                    font-weight: 310;
+                    max-width: 700px;
+                    font-size: 65pt;
+                    height: fit-content;
+                    margin-bottom: 0px;
+                }
+
+                .note-2 {
+                    margin: 30px 0 0 0;
+                    display: flex;
+                    align-items: center;
+                    font-size: 20pt;
+                    font-weight: 400;
+                }
+
+                .registration-btn-2{
+                    margin: 30px 0 0 0;
+                    font-weight: 300;
+                    cursor: pointer;
+                    @include V.common_btn();
+                }
+            }
+        }
+    }
+
+
+}

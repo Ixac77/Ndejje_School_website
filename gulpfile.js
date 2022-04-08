@@ -1,2 +1,5 @@
 //import gulp file globally
-require('./scripts/gulp.build.scripts/gulp.build')
+const {series} = require('gulp')
+const {__combineHTMLFiles} = require('./scripts/gulp.build.html')
+
+exports.default = series(__combineHTMLFiles)

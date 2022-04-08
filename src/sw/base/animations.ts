@@ -1,5 +1,5 @@
 import anime, { AnimeAnimParams, AnimeInstance } from "animejs";
-import {IDisposable} from "./domListener"
+import {IDisposable} from "../common/domListener"
 
 
 

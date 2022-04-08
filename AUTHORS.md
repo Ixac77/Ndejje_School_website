@@ -1,6 +1,6 @@
 Ndejje School website is authored by
 
 - Takozekibi Isaac
-- Anyiru Aurthor
+- Anyuru Arthur
 - Kalema Pius
 - Mulungi Jeremiah
