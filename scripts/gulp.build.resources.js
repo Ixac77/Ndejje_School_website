@@ -5,9 +5,16 @@ function __transferResources() {
 
     return gulp.src([
         "./Resources/test-images/ndejje.svg",
-        "./Resources/test-images/img1.jpg",
+        "./Resources/test-images/books.jpg",
+        "./Resources/test-images/teach.jpg",
+        "./Resources/test-images/girl.jpg",
+        "./Resources/fonts/*.ttf"
         
     ])
-
+    .pipe(
+        gulp.dest("./.devcontainer/resources"))
 
 }
+
+
+exports.MoveCommonResources = __transferResources

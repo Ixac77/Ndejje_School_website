@@ -20,4 +20,4 @@ function  __gulpTypescriptBuild(){
         .pipe(gulp.dest("src/sw/cgl_scripts"))
 }
 
-exports.__gulpTypescriptBuild = __gulpTypescriptBuild;
+exports.CompileTypeScriptFiles = __gulpTypescriptBuild;

@@ -4,6 +4,28 @@
 
 */
 
+
+@font-face {
+    font-family: "segmdl" ;
+    font-display: block;
+    src: url("../resources/segmdl2.ttf") format("truetype");
+}
+
+.codicon[class *=codicon-]{
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+}
+
+
+.codicon-education::before {
+    content: "\E7BE";
+}
+
+
+
 $layout-color: #00a4e0;
 $common-font : "Segoe UI";
 

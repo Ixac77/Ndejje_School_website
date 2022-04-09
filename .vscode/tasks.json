@@ -4,20 +4,32 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build HTMLFiles",
-            "type": "shell",
-            "command": "node co_build.html.js"
-        },
-        {
             "label": "Compile HTML_Extracter",
             "type": "shell",
             "command": "tsc -p C:\\Users\\PROJECT\\Desktop\\ictclub_web\\scripts\\cg_extract\\tsconfig.json"
         },
         {
-            "label": "Run Common Gulp Task",
+            "label": "Build Sass Files",
             "type": "shell",
-            "command": "gulp",
+            "command": "gulp BuildSassFiles",
             "problemMatcher": []
+        },
+        {
+            "label": "Build HTML Files",
+            "type": "shell",
+            "command": "gulp BuildHTMLFiles",
+            "problemMatcher": []
+        },
+        {
+            "label": "Live Watch HTML And Sass",
+            "type": "shell",
+            "command": "gulp WatchGulp",
+            "problemMatcher": []
+        },
+        {
+            "label": "Transfer Common Resources",
+            "type": "shell",
+            "command"  : "gulp transferResources"
         }
     ]
 }

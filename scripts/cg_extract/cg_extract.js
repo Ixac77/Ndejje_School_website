@@ -10,51 +10,12 @@ class cgExtracter {
     _baseDirectory;
     _sources;
     _outputFilename;
-    _commmonFileContents;
     constructor(CgOptions) {
-        this._commmonFileContents = "";
         this._baseDirectory = CgOptions.baseDirectory;
         this._sources = CgOptions.sources;
         this._outputFilename = CgOptions.outputFileName;
     }
     ;
-    /**
-     * Check an verify ever file exists
-     */
-    _checkAndVerifyFileSource(sourceFile) {
-        let _returns = { isAvailable: true, source: sourceFile };
-        if (fs_1.default.existsSync(sourceFile)) {
-            _returns.isAvailable = true;
-            _returns.source = sourceFile;
-        }
-        else {
-            _returns.isAvailable = false;
-            _returns.source = null;
-        }
-        return _returns;
-    }
-    ;
-    /**
-     * Create And Error Caller for verification process
-     *
-     */
-    _verificationErrorManager(options) {
-        if (!options.isAvailable) {
-            if (options.source == null || options.source) {
-                let _formatError = `Error Discovered with File: ${options.source}`;
-                console.error(_formatError);
-            }
-        }
-    }
-    ;
-    /**
-     *
-     * Combine data
-     * @returns
-     */
-    _createAndCombineData() {
-        this._createAndWriteFinalHTMLFile(this._createFinalBoundData(this._commmonFileContents));
-    }
     /**
      * Create final bound data template
      * @param data
@@ -85,57 +46,60 @@ class cgExtracter {
      * @returns
      */
     _createAndWriteFinalHTMLFile(data) {
-        if (this._baseDirectory && this._outputFilename) {
-            fs_1.default.writeFile((0, path_1.join)(this._baseDirectory, this._outputFilename), data, (err) => {
-                if (err) {
-                    //check whether file creation was succefull
-                    console.log(err.message);
-                }
-            });
-        }
-        else {
-            fs_1.default.writeFile((0, path_1.join)(__dirname, this._outputFilename), data, (err) => {
-                if (err) {
-                    //check whether file creation was succefull
-                    console.log(err.message);
-                }
-            });
-        }
+        return new Promise((c, e) => {
+            if (this._baseDirectory && this._outputFilename) {
+                fs_1.default.writeFile((0, path_1.join)(this._baseDirectory, this._outputFilename), data, (err) => {
+                    if (err) {
+                        //check whether file creation was succefull
+                        console.log(err.message);
+                    }
+                    c();
+                });
+            }
+            else {
+                fs_1.default.writeFile((0, path_1.join)(__dirname, this._outputFilename), data, (err) => {
+                    if (err) {
+                        //check whether file creation was succefull
+                        console.log(err.message);
+                    }
+                    c();
+                });
+            }
+        });
     }
-    /**
-     * Check and verify all fileSources
-     */
-    async _checkAndVerifyAllFileSourcesPresence() {
-        if (this._sources.length > 0) {
-            this._sources.forEach((_source) => {
-                this._verificationErrorManager(this._checkAndVerifyFileSource(_source));
-                /**
-                 * finshed verifying all the source files now we can start extracting content from theme
-                 */
-            });
-        }
-    }
-    ;
     /**
      * Extract content from a file using file source
      */
-    _extractContentFromFile(_fileSource) {
-        let data = fs_1.default.readFileSync(_fileSource, { encoding: 'utf8' });
-        this._commmonFileContents += data;
-    }
-    _initiateExtraction() {
-        console.log("Starting content extraction from html files..........");
-        this._sources.forEach((_fileSource) => {
-            this._extractContentFromFile(_fileSource);
+    async _extractContentFromFile(_fileSource) {
+        return new Promise((c, e) => {
+            fs_1.default.readFile(_fileSource, { encoding: 'utf8' }, (err, data) => {
+                c(data);
+                if (err) {
+                    e(err.message);
+                }
+            });
         });
     }
-    extract() {
-        console.log("Checking file Sources Presence...");
-        this._checkAndVerifyAllFileSourcesPresence();
-        console.log("Finished checking file Presence........");
-        this._initiateExtraction();
-        this._createAndCombineData();
-        console.log("Done Succefully");
+    async _initiateExtraction() {
+        return new Promise((c, e) => {
+            this._sources.forEach(async (v) => {
+                let _sourceData = "";
+                let data = await this._extractContentFromFile(v);
+                _sourceData += data;
+                c({ statement: "Completed Initial Extraction", data: _sourceData });
+            });
+        });
+    }
+    async extract() {
+        return new Promise((c, e) => {
+            this._initiateExtraction().then((data) => {
+                console.log(data.statement);
+                const dataContents = this._createFinalBoundData(data.data);
+                this._createAndWriteFinalHTMLFile(dataContents).then(() => {
+                    c();
+                });
+            }, (r) => { e(r); });
+        });
     }
 }
 exports.cgExtracter = cgExtracter;
