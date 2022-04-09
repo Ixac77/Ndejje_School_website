@@ -1,6 +1,3 @@
-@use  "../../../sass/variables.scss" as V;
-
-
 /*
 SPLIT-VIEW 3
 */
@@ -13,71 +10,82 @@ SPLIT-VIEW 3
         display: flex;
         align-items: center;
         justify-content: center;
+
         .wx-component-3 {
             width: 100%;
             height: auto;
-            font-family: V.$common-font;
-    
+            font-family: $common-font;
+
             .splitview {
                 margin: 0px 0px 0px 00px;
-               display:grid;
-               grid-template-columns: 2fr 2fr;
+                display: grid;
+                grid-template-columns: 2fr 2fr;
+
                 .splitview1 {
                     margin: 0px 30px 0px 0px;
+
                     .split-view-contents {
                         height: inherit;
                         margin-left: 40px;
                         margin-right: 10px;
+
                         .content-section-title {
                             font-size: 50pt;
                             font-weight: 325;
-                            margin-bottom:20px;
+                            margin-bottom: 20px;
                         }
+
                         .content-section-area {
                             word-wrap: break-word;
                             font-size: 11.5pt;
                             max-width: 500px;
                         }
                     }
-                
+
                 }
+
                 .splitview2 {
-                    .split-view-contents{
+                    .split-view-contents {
                         margin-top: 350px;
                         display: flex;
                         justify-content: center;
                     }
+
                     .major-content {
                         width: 80%;
-                        border-top: 1px solid V.$layout-color;
+                        border-top: 1px solid $layout-color;
                         margin-top: 20px;
                         font-size: 11.5pt;
-                        > div {
+
+                        >div {
                             margin: 25px 0px 20px 0px;
                         }
+
                         .content-redirect {
-                            @include V.button();
-                            @include V.center();
+                            @include button();
+                            @include center();
                             cursor: pointer;
-                            border: 1px solid V.$layout-color;
-                            background-color: V.$layout-color;
+                            border: 1px solid $layout-color;
+                            background-color: $layout-color;
                             color: #fff;
                             transition: all .5s;
                             font-weight: 300;
-                            &:hover{
+
+                            &:hover {
                                 background-color: unset;
                                 color: #000;
                             }
                         }
                     }
-                    
+
                 }
             }
-    
+
         }
     }
 
 }
+
 /*
 SPLIT-VIEW 3
 */

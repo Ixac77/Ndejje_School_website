@@ -7,6 +7,17 @@
             "label": "Build HTMLFiles",
             "type": "shell",
             "command": "node co_build.html.js"
+        },
+        {
+            "label": "Compile HTML_Extracter",
+            "type": "shell",
+            "command": "tsc -p C:\\Users\\PROJECT\\Desktop\\ictclub_web\\scripts\\cg_extract\\tsconfig.json"
+        },
+        {
+            "label": "Run Common Gulp Task",
+            "type": "shell",
+            "command": "gulp",
+            "problemMatcher": []
         }
     ]
 }

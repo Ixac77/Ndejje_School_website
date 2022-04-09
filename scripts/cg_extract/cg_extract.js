@@ -71,7 +71,11 @@ class cgExtracter {
                 <title>Document</title>
             </head>
             <body class="windows">
-                ${_within}
+                <div class="ponaco-main" role="application">
+                    <div class="ponaco-splitview">
+                        ${_within}
+                    </div>
+                </div>
             </body>
             </html>
             `;

@@ -1,5 +1,7 @@
-@use  "../../../sass/variables.scss" as V;
 
+/*
+    The Common Quote
+*/
 
 .ponaco-main {
     
@@ -8,10 +10,10 @@
     .wx-component-6 {
         width: 100%;
         height: 600px;
-        @include V.center();
+        @include center();
         .main-content-holder {
             width: fit-content;
-            font-family : V.$common-font;
+            font-family : $common-font;
     
             .x-content-1 {
                 font-weight: 350;

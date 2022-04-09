@@ -1,20 +1,16 @@
 
+/*
+    The Common Variables used in th setup of the scss's file structure
 
+*/
 
 $layout-color: #00a4e0;
 $common-font : "Segoe UI";
 
 
-
-
 @mixin button {
     height: 50px;
     width: 160px;
-}
-
-
-div {
-    @include button();   
 }
 
 @mixin common_btn {
@@ -50,4 +46,18 @@ div {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+@keyframes slidein {
+    0% {
+        display: none;
+        opacity: 0;
+        transform: translateX(15px);
+    }
+    100%{
+        width: 100px;
+        display: flex;
+        opacity: 1;
+        color: #fff;
+        transform: translateX(0px);
+    }
 }

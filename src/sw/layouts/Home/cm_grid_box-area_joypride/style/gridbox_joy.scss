@@ -1,7 +1,3 @@
-@use  "../../../sass/variables.scss" as V;
-
-
-
 /*
     SECTION 2
 */
@@ -13,23 +9,24 @@
         grid-row-gap: 30px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-    
+
         //first grid box
         .grid-box-1 {
             border-right: 1px solid #000;
-            
-            .content-area-1{
+
+            .content-area-1 {
                 max-width: 400px;
                 margin: 0 40px 0 40px;
                 font-size: 30pt;
-                font-family: V.$common-font;
+                font-family: $common-font;
                 font-weight: 360;
                 text-transform: uppercase;
             }
-    
+
         }
-    
-        /* for the svg image */ //currently for visual presentation
+
+        /* for the svg image */
+        //currently for visual presentation
         //will replace 
         /*
         @mixin grid-svg {
@@ -48,42 +45,43 @@
         }
         */
         //end
-    
+
         //second grid box
         .grid-box-2 {
-            .content-area-2{
+            .content-area-2 {
                 max-width: 750px;
                 margin: 0 50px 0 50px;
-    
-             
+
+
             }
         }
-    
-    
+
+
         //third grid box
-        .area-box{
+        .area-box {
             h2 {
                 margin-bottom: 10px;
                 font-weight: 450;
             }
-    
+
             p {
                 font-size: 12.5pt;
             }
         }
+
         .grid-box-3 {
             border-right: 1px solid #000;
-    
-            .content-area-3{
+
+            .content-area-3 {
                 margin: 30px 40px 0 40px;
             }
         }
-    
+
         //fourth grid box
-        .content-area-4{
+        .content-area-4 {
             max-width: 750px;
             margin: 30px 50px 0 50px;
-    
+
         }
     }
 }

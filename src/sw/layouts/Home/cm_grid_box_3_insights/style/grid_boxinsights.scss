@@ -1,127 +1,134 @@
-@use  "../../../sass/variables.scss" as V;
-
- /*
+/*
         SPLIT-VIEW 5
         */
 
-.ponaco-main{
-     
-        .ponaco-splitview-5 {
-            height: fit-content;
-            margin-bottom: 150px;
-            .vw-1 {
-                margin: 0px 0px 10px 30px;
+.ponaco-main {
 
-                .sec-1 {
-                    h1 {
-                        font-size: 45pt;
-                        font-weight: 350;
-                        margin-bottom: 8px;
+    .ponaco-splitview-5 {
+        height: fit-content;
+        margin-bottom: 150px;
+
+        .vw-1 {
+            margin: 0px 0px 10px 30px;
+
+            .sec-1 {
+                h1 {
+                    font-size: 45pt;
+                    font-weight: 350;
+                    margin-bottom: 8px;
+                }
+            }
+
+            .vw-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+
+                .vw-content-1 {
+                    max-width: 50%;
+
+                    p {
+                        color: black;
+                        font-size: 18pt;
                     }
                 }
 
-                .vw-content {
+                .content-view-redirect {
+                    @include common_btn();
+                    cursor: pointer;
+                    margin-right: 20px;
+                }
+            }
+
+            /* Grid cards */
+            .vw-content-2-cards {
+                .vw-content-cards-wrapper {
                     display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin-bottom: 20px;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
 
-                    .vw-content-1 {
-                        max-width: 50%;
-                        p{
-                            color: black;
-                            font-size: 18pt;
+                    .vw-card {
+                        position: relative;
+
+                        &:hover {
+                            border-color: $layout-color;
                         }
-                    }
 
-                    .content-view-redirect {
-                        @include V.common_btn();
                         cursor: pointer;
-                        margin-right: 20px;
-                    }
-                }
+                        // background-color: #00000009;
+                        border: 1px solid #0000001a;
+                        width: 560px;
+                        height: 470px;
+                        margin: 20px 20px 20px 20px;
 
-                /* Grid cards */
-                .vw-content-2-cards {
-                    .vw-content-cards-wrapper{
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: space-around;
-                        .vw-card {
-                            position: relative;
-                            &:hover{
-                                border-color: V.$layout-color;
-                            }
-                            cursor: pointer;
-                            // background-color: #00000009;
-                            border: 1px solid #0000001a;
-                            width: 560px;
-                            height: 470px;
-                            margin: 20px 20px 20px 20px;
-                            .check-out-comp{
-                                border: 1px solid V.$layout-color;
-                                position: absolute;
-                                color: V.$layout-color;
-                                font-weight: 350;
-                                top: 20px;
-                                right: 0px;
-                                transform: translateX(15px);
-                                width: 100px;
-                                height: 35px;
-                                font-size: 10pt;
-                                @include V.center();
-                                transition: all .5s;
-                                background-color: V.$layout-color;
-                                display: none;
-                                animation-delay: .5s;
-                                &:hover{
-                                    text-decoration: underline;
-                                }
-                                &:active{
-                                    border-color: #000;
-                                }
-                            }
-                            &:hover .check-out-comp {
-                                display: flex;
-                               animation: slidein .5s forwards;
+                        .check-out-comp {
+                            border: 1px solid $layout-color;
+                            position: absolute;
+                            color: $layout-color;
+                            font-weight: 350;
+                            top: 20px;
+                            right: 0px;
+                            transform: translateX(15px);
+                            width: 100px;
+                            height: 35px;
+                            font-size: 10pt;
+                            @include center();
+                            transition: all .5s;
+                            background-color: $layout-color;
+                            display: none;
+                            animation-delay: .5s;
+
+                            &:hover {
+                                text-decoration: underline;
                             }
 
-                            .card-component-picture {
-                                width: inherit;
-                                height: 300px;
-                                background-size: cover;
-                                background-repeat: no-repeat;
-                                background-image: url('../resources/pexels-pixabay-301926.jpg');
-                            }
-                            .card-component-title {
-                                margin-top: 15px;
-                                width: 150px;
-                                max-width: 200px;
-                                height: 30px;
-                                font-weight: 400;
-                                margin-left: 20px;
-                                font-size: 15pt;
-                            }
-                            .card-componentn-short-descrpt{
-                                color: #000000be;
-                                margin-top: 0px;
-                                width: 500px;
-                                height: 80px;
-                                margin-left: 20px;
-
+                            &:active {
+                                border-color: #000;
                             }
                         }
 
+                        &:hover .check-out-comp {
+                            display: flex;
+                            animation: slidein .5s forwards;
+                        }
+
+                        .card-component-picture {
+                            width: inherit;
+                            height: 300px;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-image: url('../resources/pexels-pixabay-301926.jpg');
+                        }
+
+                        .card-component-title {
+                            margin-top: 15px;
+                            width: 150px;
+                            max-width: 200px;
+                            height: 30px;
+                            font-weight: 400;
+                            margin-left: 20px;
+                            font-size: 15pt;
+                        }
+
+                        .card-componentn-short-descrpt {
+                            color: #000000be;
+                            margin-top: 0px;
+                            width: 500px;
+                            height: 80px;
+                            margin-left: 20px;
+
+                        }
                     }
-                    
+
                 }
 
             }
 
-
         }
 
+
+    }
+
 }
-
-
