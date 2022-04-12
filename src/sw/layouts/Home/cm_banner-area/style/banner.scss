@@ -1,10 +1,6 @@
 /*
     should be placed in one file to prevent te sass compiler and gulp from commpiling and adding it multiple times
 */
-@font-face {
-    font-family: Roboto;
-    src: url("../resources/font//Montserrat-VariableFont_wght.ttf") format("truetype");
-}
 
 
 body {
@@ -45,9 +41,7 @@ body {
         background-image: url("../resources/girl.jpg");
         background-attachment: fixed;
         background-repeat: no-repeat;
-        background-size: cover;
-        filter: contrast(50%);
-
+        background-size: cover;  
 
         /*Main component header section*/
         .wx-component-header-section {

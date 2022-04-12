@@ -1,0 +1,122 @@
+/*
+        FOOTER
+        */
+
+
+.ponaco-main {
+ 
+       footer {
+
+            .component-footer-wrapper {
+                background-color: #000;
+                width: 100%;
+                height: 650px;
+                display: grid;
+                grid-template-columns: 2fr 2fr;
+
+                
+
+                .component-section-1 {
+                    color: #fff;
+                    display: grid;
+                    grid-template-rows: 1fr 1fr;
+
+
+                    .xtr-1 {
+                        .wrapper {
+                            width: fit-content;
+                            margin: 60px 0px 0px 50px;
+
+                            .tr1 {
+                                font-size: 19pt;
+                                color: #fff;
+                            }
+                            .tr2{
+                                color: #fff;
+                                font-size: 10pt;
+                            }
+                        }
+                    }
+                    .xtr-2 {
+                        .wrapper {
+                            margin: 70px 0px 0px 50px;
+                            .tr1 {
+                                color: #fff;
+                                font-size: 40pt;
+                                width: 300px;
+                                word-wrap: break-word;
+                                margin-bottom: 8px;
+                                &::after{
+                                    content: "!";
+                                }
+                            }
+                            .tr2 {
+                                cursor: pointer;
+                                @include button();
+                                @include center();
+                                border: 1px solid #fff;
+                                font-weight: 350;
+                                transition: all .5s;
+                                &:hover{
+                                    background-color: $layout-color;
+                                }
+                            }
+                        }
+                    }
+
+                    
+                }
+
+                .component-section-2 {
+                    position: relative;
+                    display: grid;
+                    grid-template-rows: 1fr 1fr 1fr;
+                    color: #fff;
+                    border-left: 1px solid #9ca79c;
+                    .xtr-component{
+                        .content-wrapper {
+                            margin: 60px 0px 0px 90px;
+
+                            .xtr-component-title{
+                                font-size: 18pt;
+                                margin-bottom: 10px;
+                            }
+                            .xtr-data-wrapper {
+                                display: flex;
+                                flex-direction: column;
+                                .item{
+                                    margin-bottom: 4px;
+                                    font-weight: 100;
+                                }
+                                .x-number{
+                                    &::before{
+                                        content: "+256-";
+                                    }
+                                }
+                                .x-fl-link{
+                                    cursor: pointer;
+                                    text-decoration: underline;
+                                    &:hover{
+                                        transition: all .5s;
+                                        color: $layout-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .control-component{
+                        font-size: 65pt;
+                        position: absolute;
+                        bottom: 40px;
+                        right: 40px;
+                        cursor: pointer; 
+                        transition: all .5s;
+                        &:active{
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+       }
+}

@@ -41,6 +41,7 @@ export class cgExtracter {
                 <meta charset="UTF-8">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" preload  rel="stylesheet">
                 <link rel="stylesheet" href="./public/workload.main.css">
                 <title>Document</title>
             </head>
@@ -98,15 +99,14 @@ export class cgExtracter {
     }
 
     async _initiateExtraction():Promise<{statement : string,data:string}>{
-        return new Promise((c,e)=>{
-            this._sources.forEach(async (v)=>{
-                let _sourceData = "";
-                let data = await this._extractContentFromFile(v)
-                _sourceData += data;
-                
-                c({statement : "Completed Initial Extraction",data : _sourceData})
-            });
-
+        return new Promise(async (c,e)=>{
+            var _dataHolder = ""
+            for await (const _sources of this._sources) {
+                let _currentSource = _sources;
+                let _dataPromise  = await this._extractContentFromFile(_currentSource);
+                _dataHolder += _dataPromise;
+            }
+            c({statement : "Completed Inital Extraction",data : _dataHolder})
         })
      
     }

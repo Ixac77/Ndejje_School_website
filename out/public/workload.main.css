@@ -1,0 +1,661 @@
+/*
+    The Common Variables used in th setup of the scss's file structure
+
+*/
+body {
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../resources/Roboto-Regular.ttf") format("truetype");
+}
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+@keyframes slidein {
+  0% {
+    display: none;
+    opacity: 0;
+    transform: translateX(15px);
+  }
+  100% {
+    width: 100px;
+    display: flex;
+    opacity: 1;
+    color: #fff;
+    transform: translateX(0px);
+  }
+}
+/*
+    should be placed in one file to prevent te sass compiler and gulp from commpiling and adding it multiple times
+*/
+body {
+  transition: all 2s;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/*
+    Main-Area inherited by all
+*/
+.ponaco-main {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+}
+.ponaco-main .ponaco-splitview {
+  width: 100%;
+  height: 100vh;
+  font-family: "Segoe UI";
+}
+.ponaco-main .ponaco-splitview-1 {
+  width: 100%;
+  height: 750px;
+  /*Responsible for the parallax effect
+  */
+  background-image: url("../resources/girl.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*Main component header section*/
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-header-section {
+  width: 100%;
+  height: 200px;
+  /*Main enroll registration btn*/
+  /*main half navigation area*/
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-header-section .wx-header-component-area {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* Main title and badge component area*/
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-header-section .wx-header-component-area .wx-badge-wrapper {
+  margin: 8px 0px 0px 30px;
+  height: 40px;
+  width: 400px;
+  display: grid;
+  grid-template-columns: 100px 300px;
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-header-section .wx-header-component-area .wx-badge-wrapper .badge-icon {
+  margin-left: 20px;
+  width: 50px;
+  height: 40px;
+  border: 1px solid red;
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-header-section .wx-header-component-area .wx-badge-wrapper .badge-icon svg image {
+  width: 100;
+  height: 100;
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-header-section .wx-header-component-area .wx-badge-wrapper .badge-title {
+  display: flex;
+  align-items: center;
+  color: black;
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-header-section .wx-header-component-area .registration-btn {
+  cursor: pointer;
+  margin: 10px 20px 0px 0px;
+  height: 50px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00a4e0;
+  border: 1px solid #00a4e0;
+  font-weight: 350;
+  color: #fff;
+  transition: all 0.5s;
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-header-section .wx-header-component-area .registration-btn:hover {
+  color: #000;
+  background-color: unset;
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-header-section .wx-navigation-bar-half-area {
+  margin-top: 0px;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  /*Main navigation bar wrapper area*/
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-header-section .wx-navigation-bar-half-area .navigation-bar-wrapper {
+  display: grid;
+  margin: 20px 30px 0px 0px;
+  grid-template-rows: 40px 50px;
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-header-section .wx-navigation-bar-half-area .navigation-bar-wrapper .main-navigation-bar {
+  width: auto;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-header-section .wx-navigation-bar-half-area .navigation-bar-wrapper .main-navigation-bar ul.navigation-items {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-header-section .wx-navigation-bar-half-area .navigation-bar-wrapper .main-navigation-bar ul.navigation-items li {
+  margin: 0px 20px 0px 20px;
+  list-style: none;
+  border-bottom: 1px solid #00000000;
+  transition: all 0.4s;
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-header-section .wx-navigation-bar-half-area .navigation-bar-wrapper .main-navigation-bar ul.navigation-items li:hover {
+  border-bottom: 1px solid #000;
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-header-section .wx-navigation-bar-half-area .navigation-bar-wrapper .main-navigation-bar ul.navigation-items li a {
+  text-decoration: none;
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-header-section .wx-navigation-bar-half-area .navigation-bar-wrapper .main-navigation-bar ul.navigation-items li a:active {
+  color: unset;
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-user-section {
+  width: fit-content;
+  margin-left: 30px;
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-user-section .welcome-note-section {
+  display: grid;
+  grid-template-rows: auto 50px 40px;
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-user-section .welcome-note-section .note-1 {
+  word-wrap: normal;
+  font-weight: 310;
+  max-width: 700px;
+  font-size: 65pt;
+  height: fit-content;
+  margin-bottom: 0px;
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-user-section .welcome-note-section .note-2 {
+  margin: 30px 0 0 0;
+  display: flex;
+  align-items: center;
+  font-size: 20pt;
+  font-weight: 400;
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-user-section .welcome-note-section .registration-btn-2 {
+  margin: 30px 0 0 0;
+  font-weight: 300;
+  cursor: pointer;
+  height: 50px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00a4e0;
+  border: 1px solid #00a4e0;
+  font-weight: 350;
+  color: #fff;
+  transition: all 0.5s;
+}
+.ponaco-main .ponaco-splitview-1 .wx-component-user-section .welcome-note-section .registration-btn-2:hover {
+  color: #000;
+  background-color: unset;
+}
+
+/*
+        FOOTER
+        */
+.ponaco-main footer .component-footer-wrapper {
+  background-color: #000;
+  width: 100%;
+  height: 650px;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+}
+.ponaco-main footer .component-footer-wrapper .component-section-1 {
+  color: #fff;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.ponaco-main footer .component-footer-wrapper .component-section-1 .xtr-1 .wrapper {
+  width: fit-content;
+  margin: 60px 0px 0px 50px;
+}
+.ponaco-main footer .component-footer-wrapper .component-section-1 .xtr-1 .wrapper .tr1 {
+  font-size: 19pt;
+  color: #fff;
+}
+.ponaco-main footer .component-footer-wrapper .component-section-1 .xtr-1 .wrapper .tr2 {
+  color: #fff;
+  font-size: 10pt;
+}
+.ponaco-main footer .component-footer-wrapper .component-section-1 .xtr-2 .wrapper {
+  margin: 70px 0px 0px 50px;
+}
+.ponaco-main footer .component-footer-wrapper .component-section-1 .xtr-2 .wrapper .tr1 {
+  color: #fff;
+  font-size: 40pt;
+  width: 300px;
+  word-wrap: break-word;
+  margin-bottom: 8px;
+}
+.ponaco-main footer .component-footer-wrapper .component-section-1 .xtr-2 .wrapper .tr1::after {
+  content: "!";
+}
+.ponaco-main footer .component-footer-wrapper .component-section-1 .xtr-2 .wrapper .tr2 {
+  cursor: pointer;
+  height: 50px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  font-weight: 350;
+  transition: all 0.5s;
+}
+.ponaco-main footer .component-footer-wrapper .component-section-1 .xtr-2 .wrapper .tr2:hover {
+  background-color: #00a4e0;
+}
+.ponaco-main footer .component-footer-wrapper .component-section-2 {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  color: #fff;
+  border-left: 1px solid #9ca79c;
+}
+.ponaco-main footer .component-footer-wrapper .component-section-2 .xtr-component .content-wrapper {
+  margin: 60px 0px 0px 90px;
+}
+.ponaco-main footer .component-footer-wrapper .component-section-2 .xtr-component .content-wrapper .xtr-component-title {
+  font-size: 18pt;
+  margin-bottom: 10px;
+}
+.ponaco-main footer .component-footer-wrapper .component-section-2 .xtr-component .content-wrapper .xtr-data-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.ponaco-main footer .component-footer-wrapper .component-section-2 .xtr-component .content-wrapper .xtr-data-wrapper .item {
+  margin-bottom: 4px;
+  font-weight: 100;
+}
+.ponaco-main footer .component-footer-wrapper .component-section-2 .xtr-component .content-wrapper .xtr-data-wrapper .x-number::before {
+  content: "+256-";
+}
+.ponaco-main footer .component-footer-wrapper .component-section-2 .xtr-component .content-wrapper .xtr-data-wrapper .x-fl-link {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.ponaco-main footer .component-footer-wrapper .component-section-2 .xtr-component .content-wrapper .xtr-data-wrapper .x-fl-link:hover {
+  transition: all 0.5s;
+  color: #00a4e0;
+}
+.ponaco-main footer .component-footer-wrapper .component-section-2 .control-component {
+  font-size: 65pt;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.ponaco-main footer .component-footer-wrapper .component-section-2 .control-component:active {
+  transform: scale(1.2);
+}
+
+/*
+SPLIT-VIEW 3
+*/
+.ponaco-main .ponaco-splitview-3 {
+  margin: 0 0 0px 0;
+  height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../resources/keybooks.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.ponaco-main .ponaco-splitview-3 .wx-component-3 {
+  width: 100%;
+  height: auto;
+  font-family: "Segoe UI";
+}
+.ponaco-main .ponaco-splitview-3 .wx-component-3 .splitview {
+  margin: 0px 0px 0px 0px;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+}
+.ponaco-main .ponaco-splitview-3 .wx-component-3 .splitview .splitview1 {
+  margin: 0px 30px 0px 0px;
+}
+.ponaco-main .ponaco-splitview-3 .wx-component-3 .splitview .splitview1 .split-view-contents {
+  height: inherit;
+  margin-left: 40px;
+  margin-right: 10px;
+}
+.ponaco-main .ponaco-splitview-3 .wx-component-3 .splitview .splitview1 .split-view-contents .content-section-title {
+  font-size: 50pt;
+  font-weight: 325;
+  margin-bottom: 20px;
+}
+.ponaco-main .ponaco-splitview-3 .wx-component-3 .splitview .splitview1 .split-view-contents .content-section-area {
+  word-wrap: break-word;
+  font-size: 11.5pt;
+  max-width: 500px;
+}
+.ponaco-main .ponaco-splitview-3 .wx-component-3 .splitview .splitview2 .split-view-contents {
+  margin-top: 350px;
+  display: flex;
+  justify-content: center;
+}
+.ponaco-main .ponaco-splitview-3 .wx-component-3 .splitview .splitview2 .major-content {
+  width: 80%;
+  border-top: 1px solid #00a4e0;
+  margin-top: 20px;
+  font-size: 11.5pt;
+}
+.ponaco-main .ponaco-splitview-3 .wx-component-3 .splitview .splitview2 .major-content > div {
+  margin: 25px 0px 20px 0px;
+}
+.ponaco-main .ponaco-splitview-3 .wx-component-3 .splitview .splitview2 .major-content .content-redirect {
+  height: 50px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid #00a4e0;
+  background-color: #00a4e0;
+  color: #fff;
+  transition: all 0.5s;
+  font-weight: 300;
+}
+.ponaco-main .ponaco-splitview-3 .wx-component-3 .splitview .splitview2 .major-content .content-redirect:hover {
+  background-color: unset;
+  color: #000;
+}
+
+/*
+SPLIT-VIEW 3
+*/
+/*
+        SPLIT-VIEW 5
+        */
+.ponaco-main .ponaco-splitview-5 {
+  height: 1300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 {
+  margin: 0px 0px 0px 0px;
+  /* Grid cards */
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .sec-1 {
+  height: fit-content;
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .sec-1 h1 {
+  padding: 0px;
+  font-size: 45pt;
+  font-weight: 350;
+  margin: 0px 0px 0px 70px;
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content .vw-content-1 {
+  max-width: 50%;
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content .vw-content-1 p {
+  margin: 0px 0px 0px 70px;
+  color: black;
+  font-size: 18pt;
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content .content-view-redirect {
+  height: 50px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00a4e0;
+  border: 1px solid #00a4e0;
+  font-weight: 350;
+  color: #fff;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content .content-view-redirect:hover {
+  color: #000;
+  background-color: unset;
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content-2-cards .vw-content-cards-wrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content-2-cards .vw-content-cards-wrapper .wrapper-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content-2-cards .vw-content-cards-wrapper .wrapper-2 .vw-card {
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #00000004;
+  width: 560px;
+  height: 470px;
+  margin: 20px 20px 20px 20px;
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content-2-cards .vw-content-cards-wrapper .wrapper-2 .vw-card:hover {
+  border-color: #00a4e0;
+  transition: all 0.5s;
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content-2-cards .vw-content-cards-wrapper .wrapper-2 .vw-card .check-out-comp {
+  border: 1px solid #00a4e0;
+  position: absolute;
+  color: #00a4e0;
+  font-weight: 350;
+  top: 20px;
+  right: 0px;
+  transform: translateX(15px);
+  width: 100px;
+  height: 35px;
+  font-size: 10pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+  background-color: #00a4e0;
+  display: none;
+  animation-delay: 0.5s;
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content-2-cards .vw-content-cards-wrapper .wrapper-2 .vw-card .check-out-comp:hover {
+  text-decoration: underline;
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content-2-cards .vw-content-cards-wrapper .wrapper-2 .vw-card .check-out-comp:active {
+  border-color: #000;
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content-2-cards .vw-content-cards-wrapper .wrapper-2 .vw-card:hover .check-out-comp {
+  display: flex;
+  animation: slidein 0.5s forwards;
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content-2-cards .vw-content-cards-wrapper .wrapper-2 .vw-card .card-component-picture {
+  width: inherit;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content-2-cards .vw-content-cards-wrapper .wrapper-2 .vw-card .crx-1 {
+  background-image: url("../resources/ict.jpg");
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content-2-cards .vw-content-cards-wrapper .wrapper-2 .vw-card .crx-2 {
+  background-image: url("../resources/sports.jpg");
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content-2-cards .vw-content-cards-wrapper .wrapper-2 .vw-card .crx-3 {
+  background-image: url("../resources/dreams.jpg");
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content-2-cards .vw-content-cards-wrapper .wrapper-2 .vw-card .crx-4 {
+  background-size: contain;
+  background-image: url("../resources/wildlife.jpg");
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content-2-cards .vw-content-cards-wrapper .wrapper-2 .vw-card .card-component-title {
+  margin-top: 15px;
+  width: 150px;
+  max-width: 200px;
+  height: 30px;
+  font-weight: 400;
+  margin-left: 20px;
+  font-size: 15pt;
+}
+.ponaco-main .ponaco-splitview-5 .vw-1 .vw-content-2-cards .vw-content-cards-wrapper .wrapper-2 .vw-card .card-componentn-short-descrpt {
+  color: #000000be;
+  margin-top: 0px;
+  width: 500px;
+  height: 80px;
+  margin-left: 20px;
+}
+
+/*
+    The Common Quote
+*/
+.ponaco-main .ponaco-splitview-6 {
+  margin: 0 0 0px 0;
+}
+.ponaco-main .ponaco-splitview-6 .wx-component-6 {
+  width: 100%;
+  height: 800px;
+  background-image: url("../resources/vision.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ponaco-main .ponaco-splitview-6 .wx-component-6 .main-content-holder {
+  width: fit-content;
+  font-family: "Segoe UI";
+}
+.ponaco-main .ponaco-splitview-6 .wx-component-6 .main-content-holder .x-content-1 {
+  font-weight: 350;
+  font-size: 75pt;
+  max-width: 900px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #e9e9e9;
+}
+.ponaco-main .ponaco-splitview-6 .wx-component-6 .main-content-holder .x-content-1::before {
+  content: '"';
+}
+.ponaco-main .ponaco-splitview-6 .wx-component-6 .main-content-holder .x-content-1::after {
+  content: '".';
+}
+.ponaco-main .ponaco-splitview-6 .wx-component-6 .main-content-holder .x-content-2 {
+  text-align: center;
+  font-weight: 500;
+  font-size: 15pt;
+}
+.ponaco-main .ponaco-splitview-6 .wx-component-6 .main-content-holder .x-content-2::before {
+  content: "~";
+}
+.ponaco-main .ponaco-splitview-6 .wx-component-6 .main-content-holder .x-content-2::after {
+  content: "~";
+}
+
+/*
+    SECTION 2
+*/
+.ponaco-main .ponaco-splitview-2 {
+  background-color: rgba(255, 255, 255, 0.904);
+  height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ponaco-main .ponaco-splitview-2 .wrapper {
+  height: 700px;
+  display: grid;
+  grid-row-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  /* for the svg image */
+  /*
+  @mixin grid-svg {
+      border: solid 1px #000;
+      width: 70px;
+      height: 50px;
+      margin: 0 0 35px 0;
+      @include center();
+  }
+
+  @mixin svg {
+      border: #000 1px solid;
+      width: 35px;
+      height: 25px;
+      background-color: #70c8f1;
+  }
+  */
+}
+.ponaco-main .ponaco-splitview-2 .wrapper .grid-box-1 {
+  border-right: 1px solid #000;
+}
+.ponaco-main .ponaco-splitview-2 .wrapper .grid-box-1 .content-area-1 {
+  max-width: 400px;
+  margin: 0 40px 0 40px;
+  font-size: 30pt;
+  font-family: "Segoe UI";
+  font-weight: 360;
+  text-transform: uppercase;
+}
+.ponaco-main .ponaco-splitview-2 .wrapper .grid-box-2 .content-area-2 {
+  max-width: 750px;
+  margin: 0 50px 0 50px;
+}
+.ponaco-main .ponaco-splitview-2 .wrapper .grid-common-box .content-image-item {
+  border: 1px solid red;
+  width: 100px;
+  height: 100px;
+}
+.ponaco-main .ponaco-splitview-2 .wrapper .area-box h2 {
+  margin-bottom: 10px;
+  font-weight: 450;
+}
+.ponaco-main .ponaco-splitview-2 .wrapper .area-box p {
+  font-size: 12.5pt;
+}
+.ponaco-main .ponaco-splitview-2 .wrapper .grid-box-3 {
+  border-right: 1px solid #000;
+}
+.ponaco-main .ponaco-splitview-2 .wrapper .grid-box-3 .content-area-3 {
+  margin: 30px 40px 0 40px;
+}
+.ponaco-main .ponaco-splitview-2 .wrapper .content-area-4 {
+  max-width: 750px;
+  margin: 30px 50px 0 50px;
+}

@@ -12,7 +12,7 @@ function __transferResources() {
         
     ])
     .pipe(
-        gulp.dest("./.devcontainer/resources"))
+        gulp.dest("./out/resources"))
 
 }
 

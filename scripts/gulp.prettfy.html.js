@@ -6,9 +6,9 @@ const prettier  = require('gulp-prettier');
 function prettify(){
 
     return gulp.src([
-        "./devcontainer/**/*.js",
-        "./devcontainer/**/*.html",
-        "./devcontainer/**/*.css"
+        "./out/**/*.js",
+        "./out/**/*.html",
+        "./out/**/*.css"
     ]).pipe(prettier())
 
 }

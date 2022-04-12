@@ -10,6 +10,10 @@ SPLIT-VIEW 3
         display: flex;
         align-items: center;
         justify-content: center;
+        background-image: url("../resources/keybooks.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
 
         .wx-component-3 {
             width: 100%;

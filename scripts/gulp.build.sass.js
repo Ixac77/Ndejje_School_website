@@ -19,6 +19,6 @@ function __gulpBuildSasstask(){
             .pipe(
                 gulp_sass_compiler().on('error',__sassErrorHandler)
                 )
-            .pipe(gulp.dest("devcontainer/public"))
+            .pipe(gulp.dest("./out/public"))
 }
 exports.BuildSassFiles = __gulpBuildSasstask;
