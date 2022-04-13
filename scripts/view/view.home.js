@@ -29,7 +29,7 @@ const {cgExtracter} = require("../cg_extract/cg_extract");
 const EXTRACTER = new cgExtracter({
     sources :__HTMLFILES__HOME,
     baseDirectory : __dirname,
-    outputFileName  : "./out/workload.main.html"
+    outputFileName  : "./out/public/views/home.view.html"
 });
 
 exports.HomeExtracter = EXTRACTER;

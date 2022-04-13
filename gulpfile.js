@@ -2,7 +2,6 @@
 const {watch,parallel} = require('gulp'),
     {BuildSassFiles} = require('./scripts/gulp.build.sass'),
     {MoveCommonResources} = require('./scripts/gulp.build.resources'),
-    {buildHTMLFiles} = require('./scripts/gulp.build.html'),
     {prettify} = require('./scripts/gulp.prettfy.html'),
     {CompileTypeScriptFiles} = require('./scripts/gulp.build.typescript')
 
@@ -21,7 +20,7 @@ exports.PrettifyFiles = prettify
 
 exports.BuildSassFiles = BuildSassFiles;
 
-exports.BuildHTMLFiles = buildHTMLFiles;
+// exports.BuildHTMLFiles = buildHTMLFiles;
 
 exports.transferResources = MoveCommonResources;
 

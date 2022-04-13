@@ -1,4 +1,4 @@
-const {HTMLExtracter} = require('../co_build.html')
+const {HTMLExtracter} = require("../view.controller.config")
 
 
 function buildHTML(){

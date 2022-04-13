@@ -36,6 +36,12 @@
             "type": "shell",
             "command" : "gulp CompileAndBuildTypeScriptFiles"
 
-        }
+        },
+        {
+            "label": "Build Javascript Bundle",
+            "type": "shell",
+            "command" : "rollup --config rollup.config.js"
+
+        },
     ]
 }
