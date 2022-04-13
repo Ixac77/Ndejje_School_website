@@ -15,9 +15,9 @@ function __tsErrorHandler(e){
  */
 
 function  __gulpTypescriptBuild(){
-    return  gulp.src("src/sw/**/*.ts")
+    return  gulp.src("src/sw/workspace/**/*.ts")
         .pipe(tsProject().on('error',__tsErrorHandler))
-        .pipe(gulp.dest("src/sw/cgl_scripts"))
+        .pipe(gulp.dest("src/sw/bundle"))
 }
 
 exports.CompileTypeScriptFiles = __gulpTypescriptBuild;

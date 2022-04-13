@@ -30,6 +30,12 @@
             "label": "Transfer Common Resources",
             "type": "shell",
             "command"  : "gulp transferResources"
+        },
+        {
+            "label": "Compile Typescript Files",
+            "type": "shell",
+            "command" : "gulp CompileAndBuildTypeScriptFiles"
+
         }
     ]
 }

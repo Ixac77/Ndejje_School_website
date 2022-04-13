@@ -323,6 +323,78 @@ body {
 }
 
 /*
+    SECTION 2
+*/
+.ponaco-main .ponaco-splitview-2 {
+  background-color: rgba(255, 255, 255, 0.904);
+  height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ponaco-main .ponaco-splitview-2 .wrapper {
+  height: 700px;
+  display: grid;
+  grid-row-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  /* for the svg image */
+  /*
+  @mixin grid-svg {
+      border: solid 1px #000;
+      width: 70px;
+      height: 50px;
+      margin: 0 0 35px 0;
+      @include center();
+  }
+
+  @mixin svg {
+      border: #000 1px solid;
+      width: 35px;
+      height: 25px;
+      background-color: #70c8f1;
+  }
+  */
+}
+.ponaco-main .ponaco-splitview-2 .wrapper .grid-box-1 {
+  border-right: 1px solid #000;
+}
+.ponaco-main .ponaco-splitview-2 .wrapper .grid-box-1 .content-area-1 {
+  max-width: 400px;
+  margin: 0 40px 0 40px;
+  font-size: 30pt;
+  font-family: "Segoe UI";
+  font-weight: 360;
+  text-transform: uppercase;
+}
+.ponaco-main .ponaco-splitview-2 .wrapper .grid-box-2 .content-area-2 {
+  max-width: 750px;
+  margin: 0 50px 0 50px;
+}
+.ponaco-main .ponaco-splitview-2 .wrapper .grid-common-box .content-image-item {
+  border: 1px solid red;
+  width: 100px;
+  height: 100px;
+}
+.ponaco-main .ponaco-splitview-2 .wrapper .area-box h2 {
+  margin-bottom: 10px;
+  font-weight: 450;
+}
+.ponaco-main .ponaco-splitview-2 .wrapper .area-box p {
+  font-size: 12.5pt;
+}
+.ponaco-main .ponaco-splitview-2 .wrapper .grid-box-3 {
+  border-right: 1px solid #000;
+}
+.ponaco-main .ponaco-splitview-2 .wrapper .grid-box-3 .content-area-3 {
+  margin: 30px 40px 0 40px;
+}
+.ponaco-main .ponaco-splitview-2 .wrapper .content-area-4 {
+  max-width: 750px;
+  margin: 30px 50px 0 50px;
+}
+
+/*
 SPLIT-VIEW 3
 */
 .ponaco-main .ponaco-splitview-3 {
@@ -586,76 +658,4 @@ SPLIT-VIEW 3
 }
 .ponaco-main .ponaco-splitview-6 .wx-component-6 .main-content-holder .x-content-2::after {
   content: "~";
-}
-
-/*
-    SECTION 2
-*/
-.ponaco-main .ponaco-splitview-2 {
-  background-color: rgba(255, 255, 255, 0.904);
-  height: 900px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.ponaco-main .ponaco-splitview-2 .wrapper {
-  height: 700px;
-  display: grid;
-  grid-row-gap: 30px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  /* for the svg image */
-  /*
-  @mixin grid-svg {
-      border: solid 1px #000;
-      width: 70px;
-      height: 50px;
-      margin: 0 0 35px 0;
-      @include center();
-  }
-
-  @mixin svg {
-      border: #000 1px solid;
-      width: 35px;
-      height: 25px;
-      background-color: #70c8f1;
-  }
-  */
-}
-.ponaco-main .ponaco-splitview-2 .wrapper .grid-box-1 {
-  border-right: 1px solid #000;
-}
-.ponaco-main .ponaco-splitview-2 .wrapper .grid-box-1 .content-area-1 {
-  max-width: 400px;
-  margin: 0 40px 0 40px;
-  font-size: 30pt;
-  font-family: "Segoe UI";
-  font-weight: 360;
-  text-transform: uppercase;
-}
-.ponaco-main .ponaco-splitview-2 .wrapper .grid-box-2 .content-area-2 {
-  max-width: 750px;
-  margin: 0 50px 0 50px;
-}
-.ponaco-main .ponaco-splitview-2 .wrapper .grid-common-box .content-image-item {
-  border: 1px solid red;
-  width: 100px;
-  height: 100px;
-}
-.ponaco-main .ponaco-splitview-2 .wrapper .area-box h2 {
-  margin-bottom: 10px;
-  font-weight: 450;
-}
-.ponaco-main .ponaco-splitview-2 .wrapper .area-box p {
-  font-size: 12.5pt;
-}
-.ponaco-main .ponaco-splitview-2 .wrapper .grid-box-3 {
-  border-right: 1px solid #000;
-}
-.ponaco-main .ponaco-splitview-2 .wrapper .grid-box-3 .content-area-3 {
-  margin: 30px 40px 0 40px;
-}
-.ponaco-main .ponaco-splitview-2 .wrapper .content-area-4 {
-  max-width: 750px;
-  margin: 30px 50px 0 50px;
 }

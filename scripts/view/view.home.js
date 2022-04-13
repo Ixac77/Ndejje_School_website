@@ -1,5 +1,5 @@
 //@ts-check
-const {cgExtracter} = require('./scripts/cg_extract/cg_extract');
+const {cgExtracter} = require("../cg_extract/cg_extract");
 
 
 /**
@@ -7,7 +7,7 @@ const {cgExtracter} = require('./scripts/cg_extract/cg_extract');
  */
 
 
- const __HTMLFILES__ = [
+ const __HTMLFILES__HOME = [ 
     /**
      * -----Home-Resources-----------------
      */
@@ -27,9 +27,9 @@ const {cgExtracter} = require('./scripts/cg_extract/cg_extract');
 ];
 
 const EXTRACTER = new cgExtracter({
-    sources :__HTMLFILES__,
+    sources :__HTMLFILES__HOME,
     baseDirectory : __dirname,
     outputFileName  : "./out/workload.main.html"
 });
 
-exports.HTMLExtracter = EXTRACTER;
+exports.HomeExtracter = EXTRACTER;
